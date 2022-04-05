@@ -1,0 +1,1 @@
+console.log("Testuje commitowanie przez VSC")
