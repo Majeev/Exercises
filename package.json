@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "exercise-01": "jest ./exercise-01/exercise-01.spec.js"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
