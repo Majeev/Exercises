@@ -49,11 +49,11 @@ describe("function fizzbuzz()", () => {
     })
 
     it("should throw Error for an input which is not parsable to number", () => {
-        expect(fizzbuzz(null))
+        expect(() => fizzbuzz(null))
             .toThrow(new Error())
-        expect(fizzbuzz(undefined))
+        expect(() => fizzbuzz(undefined))
             .toThrow(new Error())
-        expect(fizzbuzz(Infinity))
+        expect(() => fizzbuzz(Infinity))
             .toThrow(new Error())
     })
 })
