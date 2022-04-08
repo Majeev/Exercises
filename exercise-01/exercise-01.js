@@ -9,8 +9,28 @@
  * @throws {Error}
  */
 const fizzbuzz = (value) => {
-    return null
-}
+    
+    if(value % 15 == 0){
+        return "FizzBuzz"
+    }
+    else if(value % 5 == 0 ){
+        return "Buzz"
+    }
+    else if(value % 3 == 0){
+        return "Fizz"
+    }
+    else if (value === false){
+        throw new Error()
+    }
+    else{
+        return parseInt(value);
+    }
 
+   
+    
+    
+    
+}
+//throw new Error()
 
 module.exports = fizzbuzz
