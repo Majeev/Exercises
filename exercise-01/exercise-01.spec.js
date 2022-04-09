@@ -1,6 +1,7 @@
 const fizzbuzz = require("./exercise-01")
 
-describe("function fizzbuzz()", () => {
+
+describe("function fizzbuzz(value)", () => {
     it("should return a number", () => {
         expect(fizzbuzz(1))
             .toBe(1)
