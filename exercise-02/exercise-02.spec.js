@@ -2,23 +2,12 @@ const isPalindrome = require("./exercise-02")
 
 
 describe("function isPalindrome(value)", () => {
-    it("should throw an exception whenever a given input is not a string", () => {
-        const exception = new Error("An argument \"value\" is not a string.")
-
-        expect(() => isPalindrome())
-            .toThrow(exception)
-        expect(() => isPalindrome(null))
-            .toThrow(exception)
-        expect(() => isPalindrome({}))
-            .toThrow(exception)
-    })
-
-    it.skip("should return true for a palindrome string", () => {
+    it("should return true for a palindrome string", () => {
         expect(isPalindrome("kayak"))
             .toBe(true)
     })
 
-    it.skip("should return false for a non palindrome string", () => {
+    it("should return false for a non palindrome string", () => {
         expect(isPalindrome("kitten"))
             .toBe(false)
     })
@@ -42,5 +31,16 @@ describe("function isPalindrome(value)", () => {
             .toBe(true)
         expect(isPalindrome("A penny saved is a penny earned."))
             .toBe(false)
+    })
+
+    it.skip("should throw an exception whenever a given input is not a string", () => {
+        const exception = new Error("An argument \"value\" is not a string.")
+
+        expect(() => isPalindrome())
+            .toThrow(exception)
+        expect(() => isPalindrome(null))
+            .toThrow(exception)
+        expect(() => isPalindrome({}))
+            .toThrow(exception)
     })
 })
