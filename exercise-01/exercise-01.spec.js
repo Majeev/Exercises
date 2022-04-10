@@ -1,6 +1,7 @@
 const fizzbuzz = require("./exercise-01")
 
-describe("function fizzbuzz()", () => {
+
+describe("function fizzbuzz(value)", () => {
     it("should return a number", () => {
         expect(fizzbuzz(1))
             .toBe(1)
@@ -49,11 +50,18 @@ describe("function fizzbuzz()", () => {
     })
 
     it("should throw Error for an input which is not parsable to number", () => {
+<<<<<<< HEAD
 
         expect(() => fizzbuzz(null))
             .toThrow(new Error())
+=======
+>>>>>>> 82fe4125a45f4c00d3502446fcc1d53fd3243db9
         expect(() => fizzbuzz(undefined))
-            .toThrow(new Error())
+            .toThrow(new Error("it's an undefined"))
+        expect(() => fizzbuzz(null))
+            .toThrow(new Error("it's a null"))
+        expect(() => fizzbuzz({}))
+            .toThrow(new Error("it's an object"))
         expect(() => fizzbuzz(Infinity))
                 .toThrow(new Error())
         expect(() => fizzbuzz({}))
