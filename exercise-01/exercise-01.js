@@ -9,28 +9,37 @@
  * @throws {Error}
  */
 const fizzbuzz = (value) => {
-    
-    if(value % 15 == 0){
+    if(parseInt(value) % 15 == 0){
         return "FizzBuzz"
     }
-    else if(value % 5 == 0 ){
+    else if(parseInt(value) % 5 == 0 ){
         return "Buzz"
     }
-    else if(value % 3 == 0){
+    else if(parseInt(value) % 3 == 0){
         return "Fizz"
     }
-    else if (value === false){
-        throw new Error()
+    else if(value === null){
+        throw new Error();
     }
+    else if (value === undefined){
+        throw new Error();
+    }
+    else if(value === Infinity){
+        throw new Error();
+    }
+    else if(JSON.stringify(value) === '{}'){
+        throw new Error();
+    }
+   
+
     else{
         return parseInt(value);
+    
     }
-
    
-    
-    
     
 }
 //throw new Error()
+console.log(fizzbuzz(null));
 
 module.exports = fizzbuzz
