@@ -16,7 +16,18 @@
  * ```
  */
 const isPalindrome = (value) => {
-    throw new Error()
+  try{
+  let reg = /[\W_]/g;
+  let lowerCase = value.toLowerCase().replace(reg, '')
+  let vArray = lowerCase.toLowerCase().split("").reverse().join("");
+ 
+  const check = (lowerCase === vArray) ? true : false;
+  return check;
+ }
+ catch(e){
+
+    throw new Error("An argument \"value\" is not a string.")
+ }
 }
 
 
