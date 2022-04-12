@@ -19,16 +19,16 @@ const fizzbuzz = (value) => {
         return "Fizz"
     }
     else if(value === null){
-        throw new Error();
+        throw new Error("it's a null");
     }
     else if (value === undefined){
-        throw new Error();
+        throw new Error("it's an undefined");
     }
     else if(value === Infinity){
-        throw new Error();
+        throw new Error("it's not a number but still somewhat a number");
     }
     else if(JSON.stringify(value) === '{}'){
-        throw new Error();
+        throw new Error("it's an object");
     }
    
 
@@ -40,6 +40,5 @@ const fizzbuzz = (value) => {
     
 }
 //throw new Error()
-console.log(fizzbuzz(null));
 
 module.exports = fizzbuzz
