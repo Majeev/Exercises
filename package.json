@@ -1,9 +1,9 @@
 {
   "scripts": {
     "exercise-01": "jest ./exercise-01/exercise-01.spec.js",
-    "exercise-02": "jest ./exercise-01/exercise-02.spec.js",
-    "exercise-03": "jest ./exercise-01/exercise-03.spec.js",
-    "exercise-04": "jest ./exercise-01/exercise-04.spec.js"
+    "exercise-02": "jest ./exercise-02/exercise-02.spec.js",
+    "exercise-03": "jest ./exercise-03/exercise-03.spec.js",
+    "exercise-04": "jest ./exercise-04/exercise-04.spec.js"
   },
   "devDependencies": {
     "jest": "^27.5.1",
