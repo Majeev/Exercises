@@ -10,9 +10,20 @@
  * ```
  */
 const distinct = (iterable) => {
-    iterable.split('');
-   return [...new Set(iterable)]
-    // throw new Error()
+    const str = [...new Set(iterable)]
+    if (typeof iterable === 'object' && iterable.length === 0 ) 
+    {
+        return [];
+    }
+    else if (typeof iterable === 'object' && iterable.length !== 0) {return str}
+
+    else if (typeof iterable === 'string' && iterable.length === 0) {return iterable}
+    
+    else if (typeof iterable === 'string' && iterable.length !== 0){
+        return str.join('')
+        return [...new Set(iterable)].join('');
+    }
+
 }
 
 
