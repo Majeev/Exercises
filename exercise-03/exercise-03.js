@@ -10,19 +10,24 @@
  * ```
  */
 const distinct = (iterable) => {
-    const str = [...new Set(iterable)]
-    if (typeof iterable === 'object' && iterable.length === 0 ) 
-    {
-        return [];
-    }
-    else if (typeof iterable === 'object' && iterable.length !== 0) {return str}
-
-    else if (typeof iterable === 'string' && iterable.length === 0) {return iterable}
+    const uniqueValues = [...new Set(iterable)]
     
-    else if (typeof iterable === 'string' && iterable.length !== 0){
-        return str.join('')
-        return [...new Set(iterable)].join('');
+    if (typeof iterable === 'object' && iterable.length === 0 ) {  
+        return [];  
+    } else if (typeof iterable === 'object' && iterable.length !== 0) {
+        return uniqueValues;
+    } else if (typeof iterable === 'string' && iterable.length === 0) {
+        return iterable;
+    } else {  
+        return uniqueValues.join('');    
     }
+
+    // if(Array.from(iterable).length === 0){
+    //     return [];
+
+    // }
+
+    // return Array.from(uniqueValues);
 
 }
 
