@@ -10,7 +10,9 @@
  * ```
  */
 const distinct = (iterable) => {
-    throw new Error()
+    iterable.split('');
+   return [...new Set(iterable)]
+    // throw new Error()
 }
 
 

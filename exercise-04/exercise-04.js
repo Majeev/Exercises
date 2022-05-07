@@ -11,7 +11,21 @@
  * ```
  */
 const without = (iterable, values) => {
-    throw new Error()
+   let withoutGiven = iterable.slice(0,0);
+
+   for(let value of iterable) {
+       let givenOccurs = false;
+       for(let given of values) {
+           if(value === given) {
+                givenOccurs = true;
+           }
+        }
+            
+        if(givenOccurs === false) {
+            withoutGiven = withoutGiven.concat(value);
+       }
+   }
+   return withoutGiven;
 }
 
 
