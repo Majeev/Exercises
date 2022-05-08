@@ -10,9 +10,27 @@
  * ```
  */
 const distinct = (iterable) => {
-    iterable.split('');
-   return [...new Set(iterable)]
-    // throw new Error()
+    // let unique = [...new Set(iterable)];
+
+    // if(typeof iterable === 'string'){
+    //     return unique.join('');
+    // }
+    //     return unique;
+
+    let accumulator = iterable.slice(0,0);
+
+    for(let value of iterable) {
+        let hasDuplicate = false;
+        for(let value2 of accumulator) {
+            if(value === value2) {
+                hasDuplicate = true;
+            } 
+        } 
+        if(!hasDuplicate) {
+            accumulator = accumulator.concat(value)
+        } 
+    }
+    return accumulator
 }
 
 
