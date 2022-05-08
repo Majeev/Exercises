@@ -16,7 +16,14 @@
  * ```
  */
 const isPalindrome = (value) => {
-    throw new Error()
+    try {
+        value = value.toLowerCase().replace( /[\W_]/g, '')
+        let reversedValue = value.split('').reverse().join('');
+        return (value===reversedValue);
+
+    }catch {
+        throw new Error("An argument \"value\" is not a string.")
+    }
 }
 
 
