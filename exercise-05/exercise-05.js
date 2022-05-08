@@ -12,7 +12,16 @@
  * ```
  */
 const take = (iterable, count) => {
-    throw new Error()
+    return iterable.slice(0,count);
+    //  let accu = iterable.slice(0,0)
+    //  for(let i = 0; i<count; i++) {
+    //      if(iterable.length===0 ){
+    //          return accu
+    //      }else {
+    //      accu = accu.concat(iterable[i])
+    //      }
+    //  }
+    //  return accu;
 }
 
 
