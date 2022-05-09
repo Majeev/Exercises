@@ -39,9 +39,9 @@ describe("function take(iterable, count)", () => {
 
             it("should return a string with as much elements taken as specified", () => {
                 expect(takeWhile(iterable, (x) => x < 3))
-                    .toEqual("0112")
+                    .toEqual("01121")
                 expect(takeWhile(iterable, (x) => x < 10))
-                    .toEqual("0112358")
+                    .toEqual("011235813")
             })
         })
     })
