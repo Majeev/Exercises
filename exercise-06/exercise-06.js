@@ -12,7 +12,14 @@
  * ```
  */
 const takeWhile = (iterable, predicate) => {
-    throw new Error()
+    let accumulator = iterable.slice(0,0)
+
+    for(let value of iterable) {
+        if(predicate(value)){
+            accumulator = accumulator.concat(value)
+        }
+    }
+    return accumulator;
 }
 
 
