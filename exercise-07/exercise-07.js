@@ -14,7 +14,9 @@
  * ```
  */
 const choose = (...choices) => {
-
+    return function(){
+        return choices[Math.floor(Math.random() * choices.length)]
+    }
 }
 
 
